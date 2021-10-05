@@ -20,11 +20,20 @@ function BuscarPalabra(){
             }     
         }
     }*/
-    
     function BuscarPalabra(){
+        azul();
+        var cajas=document.querySelectorAll("#caja1 div");
     for(i=0;i<cajas.length;i++){
         var caja=cajas[i].innerHTML;
         var result=caja.replaceAll(word.value,"<b style='color:red'>" +word.value +"</b>");
+        cajas[i].innerHTML=result; 
+    }
+}
+
+function azul(){
+    for(i=0;i<cajas.length;i++){
+        var caja=cajas[i].innerHTML;
+        var result=caja.replaceAll("red","blue");
         cajas[i].innerHTML=result; 
     }
 }
